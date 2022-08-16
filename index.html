@@ -9,14 +9,27 @@
 		body{
 		  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
 		}
+		.j-spacer{
+		  width:20%;
+		}
+		.japan-map{
+		  width:80%;
+		}
 		.desc{
-		  width:25%;
+		  width:330px;
+		  height:430px;
 		  background-color: #282828;
 		  position:absolute; /* 親要素にstatic以外のpositionの値を指定する必要あり */
+/*		  top:calc(100% - 400px);
+		  left:calc(100% - 210px);*/
 		  top:10px;
 		  left:10px;
 		  border-radius:5px;
 		  color:#FFFFFF;
+		}
+		.map{
+		  display:flex;
+		  width:100%;
 		}
 		.img{
 		  width: 50%;
@@ -27,6 +40,7 @@
 		}
 		.desc-title{
 		  padding-top: 8px;
+		  margin-top: 0px;
 		  margin-left: 10px;
 		}
 		.desc-desc{
@@ -72,46 +86,50 @@
 	spot["SAPPORO"] = "札幌です。いろいろあります。";
 
 	//各地方画像
-	/*p["okinawa"][0] = "https://upload.wikimedia.org/wikipedia/commons/e/e3/Estuary_of_Tone_river_20081229.jpg";//沖縄1枚目
-	p["okinawa"][1] = "https://upload.wikimedia.org/wikipedia/commons/e/e3/Estuary_of_Tone_river_20081229.jpg";//沖縄2枚目
-	p["okinawa"][2] = "https://upload.wikimedia.org/wikipedia/commons/e/e3/Estuary_of_Tone_river_20081229.jpg";//沖縄3枚目
-	p["okinawa"][3] = "https://upload.wikimedia.org/wikipedia/commons/e/e3/Estuary_of_Tone_river_20081229.jpg";//沖縄4枚目
-	p["kyu"][0] = "";//九州1枚目
-	p["kyu"][1] = "";//九州2枚目
-	p["kyu"][2] = "";//九州3枚目
-	p["kyu"][3] = "";//九州4枚目
-	p["shi"][0] = "";//四国1枚目
-	p["shi"][1] = "";//四国2枚目
-	p["shi"][2] = "";//四国3枚目
-	p["shi"][3] = "";//四国4枚目
-	p["shik"][0] = "";//中国1枚目
-	p["shik"][1] = "";//中国2枚目
-	p["shik"][2] = "";//中国3枚目
-	p["shik"][3] = "";//中国4枚目
-	p["kin"][0] = "";//近畿1枚目
-	p["kin"][1] = "";//近畿2枚目
-	p["kin"][2] = "";//近畿3枚目
-	p["kin"][3] = "";//近畿4枚目
-	p["tou"][0] = "";//東海1枚目
-	p["tou"][1] = "";//東海2枚目
-	p["tou"][2] = "";//東海3枚目
-	p["tou"][3] = "";//東海4枚目
-	p["hok"][0] = "";//北陸1枚目
-	p["hok"][1] = "";//北陸2枚目
-	p["hok"][2] = "";//北陸3枚目
-	p["hok"][3] = "";//北陸4枚目
-	p["kant"][0] = "";//関東1枚目
-	p["kant"][1] = "";//関東2枚目
-	p["kant"][2] = "";//関東3枚目
-	p["kant"][3] = "";//関東4枚目
-	p["touh"][0] = "";//東北1枚目
-	p["touh"][1] = "";//東北2枚目
-	p["touh"][2] = "";//東北3枚目
-	p["touh"][3] = "";//東北4枚目
-	p["hokk"][0] = "";//北海道1枚目
-	p["hokk"][1] = "";//北海道2枚目
-	p["hokk"][2] = "";//北海道3枚目
-	p["hokk"][3] = "";//北海道4枚目*/
+	var one = new Array();
+	var two = new Array();
+	var thr = new Array();
+	var fou = new Array();
+	one["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/99/Naha_Shuri_Castle16s5s3200.jpg";//沖縄1枚目
+	two["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/2/21/万座毛.jpg";//沖縄2枚目
+	thr["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/90/Kabira-Bay-Kabira-park-2019.jpg";//沖縄3枚目
+	fou["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/4/41/Miyako_higashi_hennazaki.JPG";//沖縄4枚目
+	one["kyu"] = "";//九州
+	two["kyu"] = "";
+	thr["kyu"] = "";
+	fou["kyu"] = "";
+	one["shi"] = "";//四国
+	two["shi"] = "";
+	thr["shi"] = "";
+	fou["shi"] = "";
+	one["shik"] = "";//中国
+	two["shik"] = "";
+	thr["shik"] = "";
+	fou["shik"] = "";
+	one["kin"] = "";//近畿
+	two["kin"] = "";
+	thr["kin"] = "";
+	fou["kin"] = "";
+	one["tou"] = "";//東海
+	two["tou"] = "";
+	thr["tou"] = "";
+	fou["tou"] = "";
+	one["hok"] = "";//北陸
+	two["hok"] = "";
+	thr["hok"] = "";
+	fou["hok"] = "";
+	one["kant"] = "";//関東
+	two["kant"] = "";
+	thr["kant"] = "";
+	fou["kant"] = "";
+	one["touh"] = "";//東北
+	two["touh"] = "";
+	thr["touh"] = "";
+	fou["touh"] = "";
+	one["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/6/66/Tokachi_plain_01.jpg";//北海道
+	two["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hakodate_Goryokaku_Panorama_1.JPG";
+	thr["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hakodate_Goryokaku_Panorama_1.JPG";
+	fou["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/8/8e/Japan_Sapporo_Mt.Moiwa_0049.jpg";
 
 	function clickON(c_id){
 	 var all = document.querySelectorAll("g");
@@ -124,19 +142,30 @@
 	 })
 	 document.getElementById("desc-title").innerHTML = t[c_id];
 	 document.getElementById("desc-desc").innerHTML = w[c_id];
+	 var elem = document.getElementById("desc_img");
+	 elem.children[0].src = one[c_id];
+	 elem.children[1].src = two[c_id];
+	 elem.children[2].src = thr[c_id];
+	 elem.children[3].src = fou[c_id];
+	 var sann = document.querySelectorAll("#kent");
+	 sann.forEach(function(elements) {
+	   elements.setAttribute("fill","black");
+	 })
 	}
 	function setElement(c_id){
 	 var elem = document.getElementById("desc_img");
-	 elem.children[0].src = p[c_id][0];
-	 elem.children[1].src = p[c_id][1];
-	 elem.children[2].src = p[c_id][2];
-	 elem.children[3].src = p[c_id][3];
+	 elem.children[0].src = one[c_id];
+	 elem.children[1].src = two[c_id];
+	 elem.children[2].src = thr[c_id];
+	 elem.children[3].src = fou[c_id];
 	}
 	function kspot(spotN){
 	 document.getElementById("desc-title").innerHTML = spotName[spotN];
 	 document.getElementById("desc-desc").innerHTML = spot[spotN];
 	}
 	</script>
+<div class="map">
+	<div class="j-spacer"></div>
 	<div class="japan-map" id="japan-map">
 		<svg class="geolonia-svg-map" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
 		<title>Japanese Prefectures</title>
@@ -391,8 +420,20 @@
 				<!--観光スポットのアイコン-->
 				<image height="100" href="./img/SAPPORO.png" onclick="kspot('SAPPORO')" width="100" x="612" y="188"></image>
 			</g>
+			<g class="ken_n" id="Okent">
+				<text x="731" y="170" fill="black" font-family="Verdana" font-size="13" id="kent">Hokkaido</text>
+				<text x="645" y="495" fill="black" font-family="Verdana" font-size="13" id="kent">Tohoku</text>
+				<text x="614" y="668" fill="black" font-family="Verdana" font-size="13" id="kent">Kanto</text>
+				<text x="433" y="630" fill="black" font-family="Verdana" font-size="13" id="kent">Hokuriku/Shinetsu</text>
+				<text x="504" y="717" fill="black" font-family="Verdana" font-size="13" id="kent">Tokai</text>
+				<text x="366" y="704" fill="black" font-family="Verdana" font-size="13" id="kent">Kansai</text>
+				<text x="250" y="738" fill="black" font-family="Verdana" font-size="13" id="kent">Cyugoku</text>
+				<text x="260" y="800" fill="black" font-family="Verdana" font-size="13" id="kent">Shikoku</text>
+				<text x="148" y="857" fill="black" font-family="Verdana" font-size="13" id="kent">Kyusyu</text>
+			</g>
 		</g></svg>
 	</div>
+</div>
 	<div class="desc" id="desc">
 		<h3 class="desc-title" id="desc-title">北海道</h3>
 		<div class="desc-img" id="desc_img"><img alt="" class="img img_1" id="img img_1" src=""> <img alt="" class="img img_2" id="img img_2" src=""> <img alt="" class="img img_3" id="img img_3" src=""> <img alt="" class="img img_4" id="img img_4" src=""></div>
