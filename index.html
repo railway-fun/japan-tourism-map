@@ -6,10 +6,17 @@
 	<meta charset="UTF-8">
 	<title>日本地図</title>
 	<style type="text/css">
-	       font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
+		body{
+		  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
+		}
 		.desc{
-		  width:35%;
+		  width:25%;
 		  background-color: #282828;
+		  position:absolute; /* 親要素にstatic以外のpositionの値を指定する必要あり */
+		  top:10px;
+		  left:10px;
+		  border-radius:5px;
+		  color:#FFFFFF;
 		}
 		.img{
 		  width: 50%;
