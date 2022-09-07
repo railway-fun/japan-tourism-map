@@ -5,207 +5,254 @@
 	<title>日本地図</title>
 	<meta content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes" name="viewport">
 	<style type="text/css">
-.SAPPORO{
-position: absolute;top:4082px;left:168px;width:200px;
-}
-	       body{
-	         font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
-	       }
-	       .ya{
-	         display:flex;
-	       }
-	       .ya .ya-1{
-	         width:20%;
-	         text-align: left;
-	       }
-	       .ya .ya-2{
-	         width:20%;
-	         text-align: right;
-	       }
-	       .j-spacer{
-	         width:20%;
-	       }
-	       .japan-map{
-	         width:80%;
-	       }
-	       .desc{
-	         width:330px;
-	         height:370px;
-	         background-color: #282828;
-	         position:absolute; /* 親要素にstatic以外のpositionの値を指定する必要あり */
-	/*        top:calc(100% - 400px);
-	         left:calc(100% - 210px);*/
-	         top:10px;
-	         left:10px;
-	         border-radius:5px;
-	         color:#FFFFFF;
-	       }
-	       .map{
-	         display:flex;
-	         width:100%;
-	       }
-	       .img{
-	         width: 100%;
-	       }
-	       .desc-img{
-	         display: flex;
-	         flex-wrap : wrap;
-	       }
-	       .desc-title{
-	         width:60%;
-	         text-align: center;
-	       }
-	       .desc-desc{
-	         margin-left: 20px;
-	         margin-right: 30px;
-	       }
-	       #kent{
-					 font-size: 130%;
-	 font-style: oblique;
-	 font-family: times;
-	 letter-spacing: 0.04em;
-	 						 font-weight: bold;
-	       }
-	       @media (max-width: 560px) {
-	             #kent{
-	                 font-size: 150%;
-									 font-weight: bold;
-	             }
-	             #kkent{
-	                 font-size: 130%;
-									 font-weight: bold;
-									 font-family: Arial;
-	             }
-	           .japan-map{
-	             width:100%;
-	           }
-	           .desc{
-	             width:100%;
-	             height:400px;
-	             background-color: #282828;
-	             position: initial;
-	/*            top:10px;
-	             left:10px;*/
-	             border-radius:5px;
-	             color:#FFFFFF;
-	             text-decoration: none;
-	           }
-	           .j-spacer{
-	             width:0%;
-	           }
-	       }
-	   #desc-a{ text-decoration: none;}
-	   #desc-a:link { color: white; }
-	   #desc-a:visited { color: white; }
-	   #desc-a:hover { color: white; }
-	   #desc-a:active { color: white; }
-	.lound_arrow {
-	 position: relative;
-	 padding-left: 30px;
-	}
- 
-	.lound_arrow::before { /* 背景の表示設定 */
-	 content: "";
-	 position: absolute;
-	 margin: auto;
-	 top: 260;
-	 bottom: 0;
-     padding: 10px;
-	 left: 49px;
-	 width: 16px; /* 横幅 */
-	 height: 23px; /* 高さ */
-     /*border-radius: 50%;*/ /* 角の丸み */
-     border-top-left-radius: 50%;
-     border-bottom-left-radius: 50%;
-     /*border-top-right-radius: 10px;
-     border-bottom-right-radius: 10px;*/
-	 background: #4682b4;
-	 cursor: pointer;
-	}
- 
-	.lound_arrow::after { /* くの字の表示設定 */
-	 content: "";
-	 position: absolute;
-	 margin: auto;
-	 top: 260;
-	 bottom: 0;
-	 left: 59px;
-	 width: 10px;
-	 height: 10px;
-	 border-top: 3px solid #fff;
-	 border-right: 3px solid #fff;
-	 transform: rotate(45deg);
-	 cursor: pointer;
-	}
-	.round_arrow {
-	 position: relative;
-	 padding-right: 30px;	}
-	.kspot{
-		z-index:1000;
-	}
-	.round_arrow::before { /* 背景の表示設定 */
-	 content: "";
-	 position: absolute;
-	 margin: auto;
-	 top: 260;
-     padding: 10px;
-     border-top-right-radius: 50%;
-     border-bottom-right-radius: 50%;
-	 bottom: 0;
-	 right: 49px;
-	 width: 16px; /* 横幅 */
-	 height: 23px; /* 高さ */
-     /*border-radius: 50%;*/ /* 角の丸み */
-	 background: #4682b4;
-	 cursor: pointer;
-	}
- 
-	.round_arrow::after { /* くの字の表示設定 */
-	 content: "";
-	 position: absolute;
-	 margin: auto;
-	 top: 260;
-	 bottom: 0;
-	 right: 58px;
-	 width: 10px;
-	 height: 10px;
-	 border-top: 3px solid #fff;
-	 border-left: 3px solid #fff;
-	 transform: rotate(-45deg);
-	 cursor: pointer;
-	}
+		.SAPPORO {
+			position: absolute;
+			top: 4082px;
+			left: 168px;
+			width: 200px;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'メイリオ', meiryo, sans-serif;
+		}
+
+		.ya {
+			display: flex;
+		}
+
+		.ya .ya-1 {
+			width: 20%;
+			text-align: left;
+		}
+
+		.ya .ya-2 {
+			width: 20%;
+			text-align: right;
+		}
+
+		.j-spacer {
+			width: 20%;
+		}
+
+		.japan-map {
+			width: 80%;
+		}
+
+		.desc {
+			width: 330px;
+			height: 370px;
+			background-color: #282828;
+			position: absolute;
+			/* 親要素にstatic以外のpositionの値を指定する必要あり */
+			/*        top:calc(100% - 400px);
+					left:calc(100% - 210px);*/
+			top: 10px;
+			left: 10px;
+			border-radius: 5px;
+			color: #FFFFFF;
+		}
+
+		.map {
+			display: flex;
+			width: 100%;
+		}
+
+		.img {
+			width: 100%;
+		}
+
+		.desc-img {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.desc-title {
+			width: 60%;
+			text-align: center;
+		}
+
+		.desc-desc {
+			margin-left: 20px;
+			margin-right: 30px;
+		}
+
+		#kent {
+			font-size: 130%;
+			font-style: oblique;
+			font-family: times;
+			letter-spacing: 0.04em;
+			font-weight: bold;
+		}
+
+		@media (max-width: 560px) {
+			#kent {
+				font-size: 150%;
+				font-weight: bold;
+			}
+			#kkent {
+				font-size: 130%;
+				font-weight: bold;
+				font-family: Arial;
+			}
+			.japan-map {
+				width: 100%;
+			}
+			.desc {
+				width: 100%;
+				height: 400px;
+				background-color: #282828;
+				position: initial;
+				/*            top:10px;
+						left:10px;*/
+				border-radius: 5px;
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			.j-spacer {
+				width: 0%;
+			}
+		}
+
+		#desc-a {
+			text-decoration: none;
+		}
+
+		#desc-a:link {
+			color: white;
+		}
+
+		#desc-a:visited {
+			color: white;
+		}
+
+		#desc-a:hover {
+			color: white;
+		}
+
+		#desc-a:active {
+			color: white;
+		}
+
+		.lound_arrow {
+			position: relative;
+			padding-left: 30px;
+		}
+
+		.lound_arrow::before {
+			/* 背景の表示設定 */
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: 260;
+			bottom: 0;
+			padding: 10px;
+			left: 49px;
+			width: 16px;
+			/* 横幅 */
+			height: 23px;
+			/* 高さ */
+			/*border-radius: 50%;*/
+			/* 角の丸み */
+			border-top-left-radius: 50%;
+			border-bottom-left-radius: 50%;
+			/*border-top-right-radius: 10px;
+			border-bottom-right-radius: 10px;*/
+			background: #4682b4;
+			cursor: pointer;
+		}
+
+		.lound_arrow::after {
+			/* くの字の表示設定 */
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: 260;
+			bottom: 0;
+			left: 59px;
+			width: 10px;
+			height: 10px;
+			border-top: 3px solid #fff;
+			border-right: 3px solid #fff;
+			transform: rotate(45deg);
+			cursor: pointer;
+		}
+
+		.round_arrow {
+			position: relative;
+			padding-right: 30px;
+		}
+
+		.kspot {
+			z-index: 1000;
+		}
+
+		.round_arrow::before {
+			/* 背景の表示設定 */
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: 260;
+			padding: 10px;
+			border-top-right-radius: 50%;
+			border-bottom-right-radius: 50%;
+			bottom: 0;
+			right: 49px;
+			width: 16px;
+			/* 横幅 */
+			height: 23px;
+			/* 高さ */
+			/*border-radius: 50%;*/
+			/* 角の丸み */
+			background: #4682b4;
+			cursor: pointer;
+		}
+
+		.round_arrow::after {
+			/* くの字の表示設定 */
+			content: "";
+			position: absolute;
+			margin: auto;
+			top: 260;
+			bottom: 0;
+			right: 58px;
+			width: 10px;
+			height: 10px;
+			border-top: 3px solid #fff;
+			border-left: 3px solid #fff;
+			transform: rotate(-45deg);
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body>
 	<script>
 	   //設定項目
 	   //ご自分で設定をお願いいたします。
- 
 	   //各地方説明文
 	   var p = new Array();
 	   var w = new Array();
-	   w["okinawa"] = "沖縄県です。";//沖縄
-	   w["kyu"] = "九州です";//九州
-	   w["shi"] = "四国です";//四国
-	   w["shik"] = "中国です";//中国
-	   w["kin"] = "近畿です";//近畿（関西）
-	   w["tou"] = "東海です";//東海
-	   w["hok"] = "北陸です";//北陸等
-	   w["kant"] = "関東です";//関東
-	   w["touh"] = "東北です";//東北
-	   w["hokk"] = "北海道です";//北海道
+	   w["okinawa"] = "沖縄県です。"; //沖縄
+	   w["kyu"] = "九州です"; //九州
+	   w["shi"] = "四国です"; //四国
+	   w["shik"] = "中国です"; //中国
+	   w["kin"] = "近畿です"; //近畿（関西）
+	   w["tou"] = "東海です"; //東海
+	   w["hok"] = "北陸です"; //北陸等
+	   w["kant"] = "関東です"; //関東
+	   w["touh"] = "東北です"; //東北
+	   w["hokk"] = "北海道です"; //北海道
 	   //各地方名
 	   var t = new Array();
-	   t["okinawa"] = "沖縄県";//沖縄
-	   t["kyu"] = "九州";//九州
-	   t["shi"] = "四国";//四国
-	   t["shik"] = "中国";//中国
-	   t["kin"] = "近畿";//近畿（関西）
-	   t["tou"] = "東海";//東海
-	   t["hok"] = "北陸";//北陸等
-	   t["kant"] = "関東";//関東
-	   t["touh"] = "東北";//東北
-	   t["hokk"] = "北海道";//北海道
+	   t["okinawa"] = "沖縄県"; //沖縄
+	   t["kyu"] = "九州"; //九州
+	   t["shi"] = "四国"; //四国
+	   t["shik"] = "中国"; //中国
+	   t["kin"] = "近畿"; //近畿（関西）
+	   t["tou"] = "東海"; //東海
+	   t["hok"] = "北陸"; //北陸等
+	   t["kant"] = "関東"; //関東
+	   t["touh"] = "東北"; //東北
+	   t["hokk"] = "北海道"; //北海道
 	   //観光スポット説明
 	   var spot = new Array();
 	   var spotName = new Array();
@@ -229,116 +276,121 @@ position: absolute;top:4082px;left:168px;width:200px;
 	   spot["HIROSHIMA"] = "広島です。いろいろあります。";
 	   spotName["FUKUOKA"] = "福岡";
 	   spot["FUKUOKA"] = "福岡です。いろいろあります。";
- 
- 
 	   //各地方画像
 	   var one = new Array();
 	   var two = new Array();
 	   var thr = new Array();
 	   var fou = new Array();
-	   one["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/99/Naha_Shuri_Castle16s5s3200.jpg";//沖縄1枚目
-	   two["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/2/21/万座毛.jpg";//沖縄2枚目
-	   thr["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/90/Kabira-Bay-Kabira-park-2019.jpg";//沖縄3枚目
-	   fou["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/4/41/Miyako_higashi_hennazaki.JPG";//沖縄4枚目
-	   one["kyu"] = "";//九州
+	   one["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/99/Naha_Shuri_Castle16s5s3200.jpg"; //沖縄1枚目
+	   two["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/2/21/万座毛.jpg"; //沖縄2枚目
+	   thr["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/9/90/Kabira-Bay-Kabira-park-2019.jpg"; //沖縄3枚目
+	   fou["okinawa"] = "https://upload.wikimedia.org/wikipedia/commons/4/41/Miyako_higashi_hennazaki.JPG"; //沖縄4枚目
+	   one["kyu"] = ""; //九州
 	   two["kyu"] = "";
 	   thr["kyu"] = "";
 	   fou["kyu"] = "";
-	   one["shi"] = "";//四国
+	   one["shi"] = ""; //四国
 	   two["shi"] = "";
 	   thr["shi"] = "";
 	   fou["shi"] = "";
-	   one["shik"] = "";//中国
+	   one["shik"] = ""; //中国
 	   two["shik"] = "";
 	   thr["shik"] = "";
 	   fou["shik"] = "";
-	   one["kin"] = "";//近畿
+	   one["kin"] = ""; //近畿
 	   two["kin"] = "";
 	   thr["kin"] = "";
 	   fou["kin"] = "";
-	   one["tou"] = "";//東海
+	   one["tou"] = ""; //東海
 	   two["tou"] = "";
 	   thr["tou"] = "";
 	   fou["tou"] = "";
-	   one["hok"] = "";//北陸
+	   one["hok"] = ""; //北陸
 	   two["hok"] = "";
 	   thr["hok"] = "";
 	   fou["hok"] = "";
-	   one["kant"] = "";//関東
+	   one["kant"] = ""; //関東
 	   two["kant"] = "";
 	   thr["kant"] = "";
 	   fou["kant"] = "";
-	   one["touh"] = "";//東北
+	   one["touh"] = ""; //東北
 	   two["touh"] = "";
 	   thr["touh"] = "";
 	   fou["touh"] = "";
-	   one["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/6/66/Tokachi_plain_01.jpg";//北海道
+	   one["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/6/66/Tokachi_plain_01.jpg"; //北海道
 	   two["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hakodate_Goryokaku_Panorama_1.JPG";
 	   thr["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/d/d5/Hakodate_Goryokaku_Panorama_1.JPG";
 	   fou["hokk"] = "https://upload.wikimedia.org/wikipedia/commons/8/8e/Japan_Sapporo_Mt.Moiwa_0049.jpg";
- 
-	   function clickON(c_id){
-	       location.href = "/"+c_id;
+
+	   function clickON(c_id) {
+	   	location.href = "/" + c_id;
 	   }
-	   function hoverON(c_id){
-	    var all = document.querySelectorAll("g");
-	    all.forEach(function(allelement) {
-	      allelement.setAttribute("fill","#EEEEEE");
-	    })
-	    var san = document.querySelectorAll("#"+c_id);
-	    san.forEach(function(element) {
-	      element.setAttribute("fill","#EEA8B2");
-	    })
-	    document.getElementById("desc-title").innerHTML = t[c_id];
-	    document.getElementById("desc-desc").innerHTML = w[c_id];
-	    var img_area_element = document.getElementById("desc-a");
-	    img_area_element.href= "./"+c_id;
-	    var elem = document.getElementById("desc_img");
-	    elem.children[0].style = "display:block";
-	    elem.children[0].src = one[c_id];
-	    var sann = document.querySelectorAll("#kent");
-	    sann.forEach(function(elements) {
-	      elements.setAttribute("fill","black");
-	    })
+
+	   function hoverON(c_id) {
+	   	var all = document.querySelectorAll("g");
+	   	all.forEach(function (allelement) {
+	   		allelement.setAttribute("fill", "#EEEEEE");
+	   	})
+	   	var san = document.querySelectorAll("#" + c_id);
+	   	san.forEach(function (element) {
+	   		element.setAttribute("fill", "#EEA8B2");
+	   	})
+	   	document.getElementById("desc-title").innerHTML = t[c_id];
+	   	document.getElementById("desc-desc").innerHTML = w[c_id];
+	   	var img_area_element = document.getElementById("desc-a");
+	   	img_area_element.href = "./" + c_id;
+	   	var elem = document.getElementById("desc_img");
+	   	elem.children[0].style = "display:block";
+	   	elem.children[0].src = one[c_id];
+	   	var sann = document.querySelectorAll("#kent");
+	   	sann.forEach(function (elements) {
+	   		elements.setAttribute("fill", "black");
+	   	})
 	   }
-	   var dev_a = ["okinawa","kyu","shi","shik","kin","tou","hok","kant","touh","hokk"];
+	   var dev_a = ["okinawa", "kyu", "shi", "shik", "kin", "tou", "hok", "kant", "touh", "hokk"];
 	   var dev_count = 9;
-	   function next(){
-	       if(dev_count < 9){
-	           dev_count = dev_count + 1;
-	           hoverON(dev_a[dev_count]);
-	       }else{
-	           hoverON(dev_a[0]);
-	           dev_count = 0;
-	       }
+
+	   function next() {
+	   	if (dev_count < 9) {
+	   		dev_count = dev_count + 1;
+	   		hoverON(dev_a[dev_count]);
+	   	} else {
+	   		hoverON(dev_a[0]);
+	   		dev_count = 0;
+	   	}
 	   }
-	   function back(){
-	       if(dev_count > 0){
-	           dev_count = dev_count - 1;
-	           hoverON(dev_a[dev_count]);
-	       }else{
-	           hoverON(dev_a[9]);
-	           dev_count = 9;
-	       }
+
+	   function back() {
+	   	if (dev_count > 0) {
+	   		dev_count = dev_count - 1;
+	   		hoverON(dev_a[dev_count]);
+	   	} else {
+	   		hoverON(dev_a[9]);
+	   		dev_count = 9;
+	   	}
 	   }
-	   function goURL(c_id){
-	       location.href = c_id;
+
+	   function goURL(c_id) {
+	   	location.href = c_id;
 	   }
-	   function setElement(c_id){
-	    var elem = document.getElementById("desc_img");
-	    elem.children[0].src = one[c_id];
+
+	   function setElement(c_id) {
+	   	var elem = document.getElementById("desc_img");
+	   	elem.children[0].src = one[c_id];
 	   }
-	   function kspot(spotN){
-	    document.getElementById("desc-title").innerHTML = spotName[spotN];
-	    document.getElementById("desc-desc").innerHTML = spot[spotN];
-	    var elem = document.getElementById("desc_img");
-	    elem.children[0].style = "display:none";
+
+	   function kspot(spotN) {
+	   	document.getElementById("desc-title").innerHTML = spotName[spotN];
+	   	document.getElementById("desc-desc").innerHTML = spot[spotN];
+	   	var elem = document.getElementById("desc_img");
+	   	elem.children[0].style = "display:none";
 	   }
-	   function kspottap(spotN){
-	    location.href = "./spot/"+spotN;
+
+	   function kspottap(spotN) {
+	   	location.href = "./spot/" + spotN;
 	   }
-	   window.addEventListener('load', function(){
-	       hoverON('hokk')
+	   window.addEventListener('load', function () {
+	   	hoverON('hokk')
 	   });
 	</script>
 	<div class="map">
